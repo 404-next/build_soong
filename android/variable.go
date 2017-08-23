@@ -20,6 +20,8 @@ import (
 	"runtime"
 	"strings"
 
+	"p404/soong/android"
+
 	"github.com/google/blueprint/proptools"
 )
 
@@ -175,6 +177,9 @@ type variableProperties struct {
 		Device_support_hwfde_perf struct {
 			Cflags []string
 		}
+
+		// include P404 variables
+		P404 android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -442,6 +447,9 @@ type productVariables struct {
 	SelinuxIgnoreNeverallows bool `json:",omitempty"`
 
 	SepolicySplit bool `json:",omitempty"`
+
+	// include P404 variables
+	P404 android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
