@@ -17,7 +17,6 @@ bootstrap_go_package {
         "soong-response",
         "soong-shared",
         "soong-ui-metrics_proto",
-        "soong-p404",
     ],
     srcs: [
         "androidmk.go",
